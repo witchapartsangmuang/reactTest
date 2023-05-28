@@ -1,0 +1,146 @@
+$color1: #ffa200;
+$color2: #6eda78;
+
+.changeLanguageSelect {
+    width: 100%;
+}
+
+.containerActionButton {
+    margin-top: 100px;
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-bottom: 50px;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: center;
+    &:hover {
+        border: 0;
+        background-color: $color1;
+        .trapezoid::before, .trapezoid::after {
+            border-color: transparent transparent $color1 transparent;
+        }
+        .diamond::before, .diamond::after {
+            border-color: transparent transparent $color1 transparent;
+        }
+    }
+}
+
+.iconSize {
+    font-size: 100px;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.iconCardArea {
+    margin-bottom: 15px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.circle {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+    border-radius: 50%;
+
+}
+
+.square {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+}
+
+.rectangle {
+    display: flex;
+    width: 180px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+}
+
+
+
+.trapezoid {
+    display: flex;
+    width: 180px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+        border-style: solid;
+        border-width: 0 0 100px 30px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(180deg);
+        border-style: solid;
+        border-width: 0 30px 100px 0;
+        border-color: transparent transparent #ffffff transparent;
+    }
+}
+
+.diamond {
+    display: flex;
+    width: 180px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+    // transform: skewX(20deg);
+    display: flex;
+    width: 180px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        transform: rotate(90deg);
+        border-style: solid;
+        border-width: 0 0 40px 100px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(180deg);
+        border-style: solid;
+        border-width: 0 40px 100px 0;
+        border-color: transparent transparent #ffffff transparent;
+    }
+}
+
+.Ellipse {
+    display: flex;
+    width: 180px;
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+    border-radius: 50%;
+}

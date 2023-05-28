@@ -1,0 +1,9 @@
+.inputHideArrows::-webkit-outer-spin-button,
+.inputHideArrows::-webkit-inner-spin-button {
+  -webkit-appearance: none ;
+  margin: 0;
+}
+
+.inputHideArrows:focus {
+    border-color: #6EAAF3 !important;
+}

@@ -1,3 +1,10 @@
+$color1: #ffa200;
+$color2: #6eda78;
+
+body {
+  background-image: linear-gradient(to left, $color1, $color2)
+}
+
 .App {
   text-align: center;
 }
@@ -32,6 +39,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
