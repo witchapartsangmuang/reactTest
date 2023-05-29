@@ -163,6 +163,7 @@ const EmployeeTable = (props: any) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const handleOk = () => {
         deleteAllSelectDataFunc()
+        setSelectedRowKeys([])
         setIsModalOpen(false)
     }
     const handleCancel = () => {
@@ -173,7 +174,7 @@ const EmployeeTable = (props: any) => {
         <>
             <Row justify={'center'}>
                 <Col className='tableContainer' span={24}>
-                    <Button className='deleteAllSelectButton' disabled={selectedRowKeys.length > 0 ? false : true} onClick={() => { setIsModalOpen(true) }}>ลบข้อมูลที่เลือกทั้งหมด</Button>
+                    <Button className='deleteAllSelectButton' disabled={selectedRowKeys.length > 0 ? false : true} onClick={() => { setIsModalOpen(true) }}>{t('delete all selected data')}</Button>
                     <Table
                         columns={columns}
                         dataSource={data.length === 0 ? [] : data}
@@ -187,8 +188,15 @@ const EmployeeTable = (props: any) => {
                     />
                 </Col>
             </Row>
-            <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <p>Are you sure to want to delete all your selected data(s) ?</p>
+            <Modal
+                title={t("Delete data")}
+                open={isModalOpen}
+                okText={t('OK')}
+                cancelText={t('Cancel')}
+                onOk={handleOk}
+                onCancel={handleCancel}
+            >
+                <p>{t('Are you sure to want to delete all your selected data(s) ?')}</p>
             </Modal>
         </>
     )

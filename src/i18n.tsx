@@ -31,7 +31,12 @@ const resources = {
       'Thai':'Thai',
       'Chinese':'Chinese',
       'American':'America',
-      'manage':'manage'
+      'manage':'manage',
+      'Delete data':'Delete data',
+      'Are you sure to want to delete all your selected data(s) ?':'Are you sure to want to delete all your selected data(s) ?',
+      'delete all selected data':'delete all selected data',
+      'OK':'OK',
+      'Cancel':'Cancel'
     }
   },
   TH: {
@@ -60,7 +65,12 @@ const resources = {
       'Thai':'ไทย',
       'Chinese':'จีน',
       'American':'อเมริกัน',
-      'manage':'จัดการ'
+      'manage':'จัดการ',
+      'Delete data':'ลบข้อมูล',
+      'Are you sure to want to delete all your selected data(s) ?':'คุณต้องการลบข้อมูลทั้งหมดที่คุณเลือกหรือไม่ ?',
+      'delete all selected data':'ลบข้อมูลทั้งหมดที่เลือก',
+      'OK':'ตกลง',
+      'Cancel':'ยกเลิก'
     }
   }
 };
